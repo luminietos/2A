@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<!--the HTML's language-->
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!--note to self; fixed bug "key 'width-device-width' is not recognized and ignored" by...-->
+    <!-- ...deleting the space between 'width=device-width,' & 'initial-scale=1'-->
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+
+    <!--links to font-awesome's icons (for the buttons!)-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css"
+        integrity="sha512-10/jx2EXwxxWqCLX/hHth/vu2KY3jCF70dCQB8TSgNjbCVAC/8vai53GfMDrO2Emgwccf2pJqxct9ehpzG+MTw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!--links to (my) external CSS file-->
+    <!--<link rel="stylesheet" href="example.css">-->
+</head>
+
+<body>
+    <h1>Digitraffic Commuter Traffic App</h1>
+    <h2>Which trains are departing and arriving next from a specific station?
+    </h2>
+    <h3>Please select a trainstation, to get the current information concerning that station.
+    </h3>
+
+    <div id="train_station">
+        <input id="station" type="text" placeholder="i.e. Pasila"></input>
+        <button id="submit_btn" type="submit">
+            <!--adds a fontawesome search icon to i-->
+            <!--figured the magnifying glass is easily recognizable-->
+            <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+    </div>
+    <div id="toggle">
+        <select name="station_name">
+            <option value="1"></option>
+            <option value="2"></option>
+        </select>
+    </div>
+</body>
+
+<!--links to (my) external JavaScript file-->
+<script src="./a.js"></script>
+
+</html>
