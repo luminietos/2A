@@ -1,7 +1,6 @@
  # Project 02a 
- Project started in May 2022.
- <a href="https://luminietos.github.io/2A/" target="_blank">Hello, world!</a>
-[Project's Github link](https://luminietos.github.io/2A/) & [Project's Netlify link]()
+ Project started in April, 2022.
+[Project's Github link](https://luminietos.github.io/2A/) & [Project's Netlify link](https://62716c958bbe99005ca753f8--capable-sprinkles-cabbc2.netlify.app/)
 
 ## Description
 This is a Finnish train station information app that that utilizes Live JSON API from Digitraffic. 
@@ -22,4 +21,4 @@ Below this is the aforementioned second green container. It functions like the o
 The data is sourced from [Digitraffic's API](https://www.digitraffic.fi/rautatieliikenne/#junien-tiedot-trains).
 
 ## Project Status
-This project is *technically* completed. I may or may not come back to fix this at a later date.
+This project is completed. I may or may not come back to fix this at a later date. 
