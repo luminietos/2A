@@ -16,33 +16,98 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <!--links to (my) external CSS file-->
-    <!--<link rel="stylesheet" href="example.css">-->
+    <link rel="stylesheet" href="a.css">
 </head>
 
 <body>
-    <h1>Digitraffic Commuter Traffic App</h1>
-    <h2>Which trains are departing and arriving next from a specific station?
-    </h2>
-    <h3>Please select a trainstation, to get the current information concerning that station.
-    </h3>
-
-    <div id="train_station">
-        <input id="station" type="text" placeholder="i.e. Pasila"></input>
-        <button id="submit_btn" type="submit">
-            <!--adds a fontawesome search icon to i-->
-            <!--figured the magnifying glass is easily recognizable-->
-            <i class="fa-solid fa-magnifying-glass"></i>
-        </button>
+    <div id="header">
+        <h1> Welcome to <span style="font-style: italic;">Trainformation</span> </h1>
     </div>
-    <div id="toggle">
-        <select name="station_name">
-            <option value="1"></option>
-            <option value="2"></option>
-        </select>
+    <div id="not_the_header">
+        <div id="txtt">
+            <h2>"Which trains are departing and arriving next <br /> from <span style="color: #309975">[a specific
+                    station]</span>?"
+            </h2>
+            <!-- <h3>Please enter a train station's short-code ("HKI", etc.) into the text field below, <br /> to get updated
+            information concerning that station.
+        </h3> -->
+        </div> <!--end of txtt div-->
+
+        <!--CONTAINER ONE-->
+        <!--container for the data-->
+        <div id="train_station">
+            <p id="shh">Enter an abbreviated <span style="font-weight: bold; color: rgba(0, 0, 0, 0.788);"> Station Name
+                </span> below.</p>
+            <!--on form submit performs getTrainData function 
+        and -->
+            <form onsubmit="getData(); event.preventDefault();">
+                <input id="station_1" type="text" placeholder="i.e. 'PLA' for 'Pasila'..."></input>
+                <!--search button-->
+                <button id="submit_btn" type="submit">
+                    <!--adds a fontawesome search icon-->
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+            </form>
+			
+			<p>Information regarding the station of your choosing will appear below, <br /> once you've entered a station into the above search field.</p>
+
+            <br />
+            <!--output area-->
+            <div id="txtarea">
+                <!-- <pre id="printingg"></pre> -->
+                <p id="output"> </p>
+            </div>
+			
+            <!--text area for displaying (userinput station's) data-->
+            <!--increases row amount on click (pre- and post-data) 
+            and decreases row amount (only pre-data) when
+        user clicks out of the text area-->
+            <textarea readonly id="traindata" rows="2" onclick="this.rows='20'"
+                onblur="if(this.value == '') this.rows='2'"
+                placeholder="Information regarding the station of your choosing will appear here."></textarea>
+        </div> <!--"train_station_raw" div ends-->
+
+
+
+        <!--CONTAINER TWO-->
+        <h2>See the data's origin:</h2>
+        <!--container including the search bar, 
+        submit button & raw datatext area-->
+        <div id="train_station_raw">
+            <p id="shh">Enter an abbreviated <span style="font-weight: bold; color: rgba(0, 0, 0, 0.788);"> Station Name
+                </span> below.</p>
+            <!--on form submit performs getTrainData function 
+        and -->
+            <form onsubmit="getTrainData(); event.preventDefault();">
+                <label><input id="station" type="text" placeholder="i.e. 'PLA', etc."></input></label>
+                <!--search button-->
+                <button id="submit_btn" type="submit">
+                    <!--adds a fontawesome search icon-->
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+            </form>
+
+            <p>Data will appear below. <br /> You can expand the text area below by clicking on it.</p>
+
+            <br />
+            <!--text area for displaying (userinput station's) raw data-->
+            <!--increases row amount on click (pre- and post-data) 
+            and decreases row amount (only pre-data) when
+        user clicks out of the text area-->
+            <textarea readonly id="rawdata" rows="2" onclick="this.rows='20'"
+                onblur="if(this.value == '') this.rows='2'"
+                placeholder="Raw data regarding the station of your choosing will appear here."></textarea>
+        </div> <!--"train_station_raw" div ends-->
+    </div>
+
+    <!--the footer-->
+    <div id="foot">
+        <footer>
+            <h3>Wilma Paloheimo, April 2022. Data from Digitraffic.</h3>
+        </footer>
     </div>
 </body>
 
 <!--links to (my) external JavaScript file-->
 <script src="./a.js"></script>
-
 </html>

@@ -1,0 +1,356 @@
+/*Note: titled the different sections of my code for
+ease of use whilst coding & decided to leave it in. 
+Hope it helps!*/
+
+/*THE 101'S STYLING*/
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    overflow: auto;
+}
+
+/*LARGER BODY ELEMENT'S STYLING 
+(the body's gen. +the header, the footer & what's in btwn em)*/
+body {
+    /*whitesmoke's less... eye-searing*/
+    background-color: #30997421;
+    font-family: 'DM Sans', sans-serif;
+
+    /*in the case of vertical overflow, site clips the content
+    and provides a scrolling mechanism (the scrollbar)*/
+    overflow-y: scroll;
+    /*in the case of horizontal overflow, site clips the content
+    and doesn't provide a scrolling mechanism (the scrollbar)*/
+    overflow-x: hidden;
+
+    align-items: center;
+    height: 100vh;
+
+    margin: 0px;
+
+    position: relative;
+    box-sizing: border-box;
+
+    /*NOTE TO SELF: no max. height bc there's also*/
+    /*no max. number of items listed - can be as long as needed!!*/
+    min-width: 500px;
+    min-height: 100px;
+}
+
+body::after {
+    content: '';
+    display: block;
+    /*set to be the same as footer's height*/
+    height: 50px;
+}
+
+footer {
+    position: relative;
+    bottom: 0;
+    /*adds space above the footer (so as to separate it)*/
+    padding-top: 50px;
+    width: 99%;
+    height: 50px;
+}
+
+#header {
+    padding-top: 40px;
+    padding-bottom: 30px;
+    text-align: center;
+    /*darker than the others*/
+    background: #0d554f;
+    font-size: 30px;
+}
+
+/*can't put the same settings in body or header as the rest,
+so I'm separating the code into two divs that can get
+diffeent margins and paddings*/
+#not_the_header {
+    padding-top: 20px;
+    padding-bottom: 30px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin: 5px;
+}
+
+/*FORM STYLING*/
+form {
+    /*again, no max. height.*/
+    min-height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*ALL TEXT STYLING (headings, p, etc.)*/
+#txtt {
+    text-align: center;
+    margin-top: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-bottom: 0;
+    /*keeps it from sliding left/right on resize*/
+    position: relative;
+    min-width: 500px;
+    min-height: 20vh;
+    padding-bottom: 0px;
+}
+
+h1 {
+    text-align: center;
+    color: whitesmoke;
+    font-size: 35px;
+    padding-top: 0px;
+    padding-bottom: 17px;
+}
+
+h2 {
+    text-align: center;
+    color: black;
+    padding: 15px;
+    font-style: italic;
+    font-size: 20px;
+}
+
+/*note to self: 
+  this is the footer's font size*/
+h3 {
+    text-align: center;
+    padding-bottom: 15px;
+    padding-top: 45px;
+    font-weight: lighter;
+    font-size: 12px;
+    color: #03332e;
+}
+
+p {
+    text-align: center;
+    padding-top: 28px;
+    font-size: 12px;
+    /*just a lil darker than the rest*/
+    color: #022522;
+}
+
+/*alternate 'p' styling via id, 
+the "Station: " text's setings*/
+#shh {
+    font-size: 15px;
+    padding-top: 0px;
+    padding-bottom: 5px;
+    color: #03332e;
+}
+
+/*all placeholder text*/
+::placeholder {
+    /*lowers the opacity of the placeholder text*/
+    opacity: 50%;
+    /*only affect placeholder, not the items themselves*/
+    font-style: italic;
+}
+
+/*CONTAINER DIV STYLING*/
+/*the raw data container div*/
+#train_station_raw {
+    margin: auto;
+    /*centers text field & button to the center of... the center.*/
+    text-align: center;
+    align-items: center;
+
+    background-color: #309975;
+    /*ALT: background-image: linear-gradient(#309975, #63a38d, #84b478, #9fbd97);*/
+
+    /*box bg*/
+    width: 50%;
+    top: 50%;
+    /*rounds the corners*/
+    border-radius: 13px;
+
+    padding: 30px;
+
+    /*NOTE TO SELF: no max. height bc there's also*/
+    /*no max. number of items listed - can be as long as needed!!*/
+    min-width: 500px;
+    min-height: 100px;
+}
+
+/*non-raw data container*/
+#train_station {
+    margin: auto;
+    /*centers text field & button to the center of... the center.*/
+    text-align: center;
+    align-items: center;
+
+    background-color: #309975;
+    /*ALT: background-image: linear-gradient(#309975, #63a38d, #84b478, #9fbd97);*/
+
+    /*box bg*/
+    width: 50%;
+    top: 50%;
+    /*rounds the corners*/
+    border-radius: 13px;
+
+    padding: 30px;
+    margin-bottom: 50px;
+
+    /*NOTE TO SELF: no max. height bc there's also*/
+    /*no max. number of items listed - can be as long as needed!!*/
+    min-width: 500px;
+    min-height: 100px;
+}
+
+/*BUTTON STYLING*/
+#submit_btn {
+    cursor: pointer;
+    padding: 20px;
+    background-color: white;
+    color: #309975;
+    /*not as jarring*/
+    transition: all 0.4s ease;
+    text-align: center;
+    /*gets rid of the button's border & outline*/
+    outline: none;
+    border: none;
+}
+
+#submit_btn:hover {
+    cursor: pointer;
+    /*black w muted transparency settings to 
+    get a better matched darker green*/
+    background-color: rgba(0, 0, 0, 0.432);
+    color: white;
+}
+
+/*INPUT STYLING*/
+#station {
+    /*default font of the textarea (to match 2nd container)*/
+    font-family: monospace;
+}
+
+input {
+    cursor: pointer;
+    padding: 20px;
+    /*removes the border & outline of the input area*/
+    outline: none;
+    border: none;
+    width: 100%;
+}
+
+input:focus {
+    /*removes the border & outline when*/
+    /*user clicks on "add new item"*/
+    outline: none;
+    border: none;
+}
+
+select {
+    cursor: pointer;
+    background-color: white;
+    color: gainsboro;
+    width: 90px;
+    padding: 15px;
+    border-radius: 13px;
+    padding: 3px;
+    border: none;
+    outline: none;
+}
+
+/*TEXT AREA'S STYLING*/
+#traindata {
+    /*only raw data has The Programmer Font,
+    whereas the "normal" results have the same font family*/
+    font-family: 'DM Sans', sans-serif;
+    width: 100%;
+    display: block;
+    /*better readability :-)*/
+    padding: 20px;
+    /*gets rid of the grabber in the bottom right corner*/
+    resize: none;
+    /*removing outline*/
+    outline: none;
+    overflow: auto;
+}
+
+/*an actual text area doesn't work w <pre>, so.*/
+#txtarea {
+    background-color: white;
+    color: black;
+    padding-bottom: 20px;
+    margin-bottom: 10px;
+} 
+
+textarea {
+    background-color: white;
+    /*code is green now :-)*/
+    color: #08423d;
+    width: 100%;
+    display: block;
+    /*better readability*/
+    padding: 20px;
+    /*gets rid of the grabber in the bottom right corner*/
+    resize: none;
+    /*removing outline*/
+    outline: none;
+    overflow: auto;
+}
+
+textarea:focus {
+    /*removes the text area's border & outline when clicked*/
+    /*which is esp. good since you can't actually do anything 
+    in the text area, so the border would just be confusing!*/
+    outline: none;
+    border: none;
+}
+
+/*LINK STYLING*/
+a:link {
+    color: #03332e;
+}
+
+/*link changes color to green when hovered over*/
+a:hover {
+    color: #309975;
+    transition: all 0.3s ease;
+}
+
+/*THE SCROLLBAR'S STYLING*/
+::-webkit-scrollbar {
+    /*scrollbar's width*/
+    width: 15px;
+}
+
+::-webkit-scrollbar-track {
+    /*scrollbar's bg colors*/
+    background: #f1f1f1;
+    /*makes the scrollbar bg rounder as well*/
+    box-shadow: inset 0 0 3px rgba(0,0,0,0.3); 
+    -webkit-border-radius: 13px;
+    border-radius: 13px;
+}
+
+::-webkit-scrollbar-thumb {
+    /*scrollbar's color*/
+    background: darkgray;
+    /*makes the scrollbar rounder at its corners*/
+    border-radius: 13px;
+    -webkit-border-radius: 13px;
+    /*adds a shadow to the edges of the scrollbar,
+    improves visibility*/
+    box-shadow: inset 0 0 3px rgba(0,0,0,0.5); 
+}
+
+/*scrollbar on hover*/
+::-webkit-scrollbar-thumb:hover {
+    /*scrollbar's secondary color 
+    (active on hover)*/
+    background: rgba(0, 0, 0, 0.808);
+}
+
+/*when site is inactive - i.e. when user's mouse is not
+on the page, the scrollbar changes color*/
+::-webkit-scrollbar-thumb:window-inactive {
+	background: lightgray; 
+}
