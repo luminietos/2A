@@ -1,5 +1,6 @@
  # Project 02a 
  Project started in May 2022.
+ <a href="https://luminietos.github.io/2A/" target="_blank">Project's Github link</a>
 [Project's Github link](https://luminietos.github.io/2A/) & [Project's Netlify link]()
 
 ## Description
