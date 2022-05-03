@@ -1,7 +1,6 @@
  # Project 02a 
  Project started in May 2022.
- <a href="https://luminietos.github.io/2A/" target="_blank">Project's Github link</a>
-[Project's Github link](https://luminietos.github.io/2A/) & [Project's Netlify link]()
+[Project's Github link](https://luminietos.github.io/2A/){:target="_blank"} & [Project's Netlify link]()
 
 ## Description
 This is a Finnish train station information app that that utilizes Live JSON API from Digitraffic. 
