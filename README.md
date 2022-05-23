@@ -1,4 +1,4 @@
- # JS Project 02
+ # JS Project 02A
  Project started in April, 2022.
 [Project's Github link](https://luminietos.github.io/2A/) & [Project's Netlify link](https://62716c958bbe99005ca753f8--capable-sprinkles-cabbc2.netlify.app/)
 
