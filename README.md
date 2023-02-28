@@ -3,7 +3,7 @@
 ## Description
 This is a Finnish train station information app that that utilizes Live JSON API from Digitraffic. 
 It is my second JS project and my first project using an API, made for my University's JavaScript course. On top of JS, it has CSS and HTML for the UI (layout & style). It was created in April 2022. 
-You can find the site [here](https://luminietos.github.io/2A/) (GitHub) or [here](https://62716c958bbe99005ca753f8--capable-sprinkles-cabbc2.netlify.app/) (Netlify).
+You can find the site [here](https://luminietos.github.io/P02a/) (GitHub) or [here](https://62716c958bbe99005ca753f8--capable-sprinkles-cabbc2.netlify.app/) (Netlify).
 
 ## Step-by-step guide - *"How do I actually use this site?"*
 There are two green containers with two different text fields.
