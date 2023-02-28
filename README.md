@@ -15,7 +15,7 @@ Data regarding the station the user input will appear below.
 Below this is the aforementioned second green container. It functions like the one above, only this one contains the raw, live data regarding the station the user types into the text field. The textarea expands on click, and will shrink back if the user clicks outside the text area (*unless* the text area already contains data from the user's input).
 
 ## Status
-This project is complete for the foreseeable future. I may or may not come back to fix this at a later date. 
+The development of this project is complete for the foreseeable future. I may or may not come back to fix this at a later date. 
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
