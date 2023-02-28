@@ -1,4 +1,4 @@
- # Train Schedule - JS Project 02A
+ # "Trainformation" - JS Train Schedule (Project 02A)
 
 ## Description
 This is a Finnish train station information app that that utilizes Live JSON API from Digitraffic. 
